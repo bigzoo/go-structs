@@ -21,9 +21,8 @@ func (p person) greet() {
 	fmt.Println("Hey " + p.firstName)
 }
 
-func (p person) updateName(newFirstName string) person {
-	p.firstName = newFirstName
-	return p
+func (p *person) updateName(newFirstName string) {
+	(*p).firstName = newFirstName
 }
 
 func main() {
@@ -36,6 +35,6 @@ func main() {
 		},
 	}
 	// jim.print()
-	jim = jim.updateName("Chris")
+	(&jim).updateName("Chris")
 	jim.greet()
 }
