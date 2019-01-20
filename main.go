@@ -35,6 +35,6 @@ func main() {
 		},
 	}
 	// jim.print()
-	(&jim).updateName("Chris")
+	jim.updateName("Chris")
 	jim.greet()
 }
